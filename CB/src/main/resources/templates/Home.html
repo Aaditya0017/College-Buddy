@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@800&family=Montserrat:wght@800&display=swap"
+          rel="stylesheet">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{css/home.css}">
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">      <img class="left" th:src="@{/images/hj.png}" alt="">CollegeBuddy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Home.html" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">poll</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Funzone</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Chatbot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Compiler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Help</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-light"><a href="">Logout</a></button>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<h1>Welcome </h1>
+</body>
+</html>

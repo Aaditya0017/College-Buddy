@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div id="email" class="col-md-4 offset-md-4 form">
+            <form  >
+                <h2 class="text-center">Enter Registered Email</h2>
+
+                <div class="alert alert-success text-center" style="padding: 0.4rem 0.4rem">
+
+                </div>
+
+                <div class="alert alert-danger text-center">
+
+                </div>
+
+                <div class="form-group">
+                    <input id="emailId" class="form-control" type="email" name="email" placeholder="Enter Email" required >
+                </div>
+                <div class="form-group">
+                    <input id="submit" class="form-control button" type="button" name="check-reset-otp" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <div id="code" class="col-md-4 offset-md-4 form hidden">
+            <form th:action="@{/verify}" method="post" th:object="${login}" >
+                <h2 class="text-center">Code Verification</h2>
+
+                <div class="alert alert-success text-center" style="padding: 0.4rem 0.4rem">
+
+                </div>
+
+                <div class="alert alert-danger text-center">
+
+                </div>
+                <div class="form-group">
+                    <input  class="form-control" type="email" name="email" placeholder="Enter Email" required th:field="*{email}" >
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="otp" placeholder="Enter code" required  th:field="*{password}">
+                </div>
+                <div class="form-group">
+                    <input class="form-control button" type="submit" name="check-reset-otp" value="Submit">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#submit').click(function () {
+        let email = $('#emailId').val().trim();
+        $.post("http://localhost:9090/sendCode",{email:email});
+            $('#email').addClass('hidden');
+            $('#code').removeClass('hidden')
+    })
+
+</script>
+</body>
+</html>

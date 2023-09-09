@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+          crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@800&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
+  <title>Login</title>
+  <!-- css -->
+  <script src="https://kit.fontawesome.com/3c8dbba22a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" th:href="@{css/login.css}">
+</head>
+
+<body>
+<div class="container-fluid">
+
+
+  <div class="row col">
+    <div class="col-lg-6">
+      <img class="loginimg" th:src="@{images/home.jpg}" alt="">
+    </div>
+    <div class="col-lg-6">
+      <div class="forms">
+        <form th:action="@{/login}" method="post" th:object="${login}">
+          <h2 class="text-center">Login</h2>
+
+          <div class="alert alert-danger text-center">
+
+
+          <div class="form-group">
+            <input class="form-control" type="email" name="email" placeholder="Email Address" required
+                   th:field="*{email}">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Password" required th:field="*{password}">
+          </div>
+          <div class="form-group"><a th:href="@{/forgetPassword}">Forgot password?</a></div>
+          <div class="form-group">
+            <input class="btn" type="submit" name="login" value="Login">
+          </div>                        </div>
+      <div class="signup">Not yet a member? <button><a
+ th:href="@{/register}" >Signup
+        now</a>
+      </button></div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>

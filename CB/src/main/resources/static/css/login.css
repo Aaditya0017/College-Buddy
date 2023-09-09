@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container-fluid {
+    padding: 0px 0px;
+}
+
+body{
+    font-family: 'Baloo Tamma 2', cursive;}
+h2 {
+    color: rgba(222, 153, 69, 0.829);
+    border: 1px black;
+}
+.hidden{
+    display: none;
+}
+.loginimg{
+    margin: -32px;
+    width: 100%;
+    position: absolute;
+    border-radius: 0% 10% 5% 0%;
+}
+
+.forms {
+    margin: 175px 14px;;
+    padding: 37px 212px;
+    width: 100%;
+    background-color: white;
+    border-radius: 28px;
+    text-align: center;
+}
+
+.navbar-brand{
+    font-family: 'Baloo Tamma 2',cursive;
+    /* dont forget to put a comma here before cursive, in css we dont get errors so its hard to find out the mistake */
+    font-weight: bold;
+    font-size: 2.0rem;
+
+}
+.navbar{
+    padding: 19px 10px 22px 33px;
+
+}
+.nav-item{
+    padding: 0.5rem;
+    font-family: "Baloo Tamma 2";
+    font-size: 1.2rem;
+}
+.form-group input {
+    font-family: "Baloo Tamma 2", cursive;
+    text-align: center;
+    display: block;
+    border: 2px solid black;
+    margin: 18px auto;
+    padding: 4px 19px;
+    width: 100%;
+    border-radius: 8px;
+}
+.form-group {
+    text-align: center;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border: 2px solid grey;
+    display: inline-block;
+    width: 49%;
+    margin: 0px 71px;
+    padding: 7px 2px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.btn:hover {
+    background-color: tomato;
+}
